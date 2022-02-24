@@ -1,4 +1,4 @@
-HierarchLinReg <- function(my_df) {
+HierarchLinReg_Backward <- function(my_df) {
   # Some variables that will be useful
   name_of_dep_var = colnames(my_df)[1]
   model_i <- list()
