@@ -1,10 +1,10 @@
-HLR_prediction <- function(mydt,seed,split){
+HLR_prediction_Backward <- function(mydt,seed,split){
   set.seed(seed)
   dt = sort(sample(nrow(mydt), nrow(mydt)*split))
   train_alm<-as.data.frame(mydt[dt,])
   test_alm<-as.data.frame(mydt[-dt,])
   
-  hlr = HierarchLinReg(train_alm)
+  hlr = HierarchLinReg_Backward(train_alm)
   if (all(is.na(hlr))){
     results = NA
   }else{
