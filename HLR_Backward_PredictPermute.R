@@ -1,4 +1,4 @@
-HLR_pred_Permute <- function(mydtt,Niteration,data_split){
+HLR_Backward_PredictPermute <- function(mydtt,Niteration,data_split){
   set.seed(0)
   random_seq = unique(sample(20000, Niteration, rep=F))
   number_of_iter <- seq(1:Niteration)
@@ -10,7 +10,7 @@ HLR_pred_Permute <- function(mydtt,Niteration,data_split){
     if (i == 61){
       print("hellothere")
     }
-    result <- HLR_prediction(mydtt, random_seq[i], data_split)
+    result <- HLR_Backward_prediction(mydtt, random_seq[i], data_split)
     if (all(is.na(result))){
       corr_coef = NA
       staats = as.data.frame(corr_coef)
