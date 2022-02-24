@@ -1,25 +1,25 @@
-# Hierarchical Linear Regression Analysis 
+# Hierarchical Linear Regression Analysis (BACKWARD)
 
-## HierarchLinReg_function.R
-- Performs hierarchical linear regression
+## HLR_Backward.R
+- Performs backward hierarchical linear regression
 ______________
 
 
-## HLR_prediction.R
+## HLR_Backward_prediction.R
 - 1. Splits data into training and testing sets with "data_split" proportion 
   2. Performs HLR on the training set
   3. Predicts data on the testing set using the best model
 
-Note: HLR_prediction.R uses HierarchLinReg_function.R
+Note: HLR_Backward_prediction.R uses HLR_Backward.R
 ______________
 
 
-## HLR_Pred_Resample.R
+## HLR_Backward_PredictPermute.R
 - 1. Splits data into training and testing sets with "data_split" proportion 
   2. Performs HLR on the training set
   3. Predicts data on the testing set using the best model
   4. Repeats everything "Niteration" times
 
 
-Note: HLR_Pred_Resample.R uses HLR_prediction.R 
+Note: HLR_Backward_PredictPermute.R uses HLR_Backward_prediction.R 
 ______________
