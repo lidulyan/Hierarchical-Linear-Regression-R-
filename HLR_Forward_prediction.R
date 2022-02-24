@@ -4,7 +4,7 @@ HLR_Forward_prediction <- function(mydt,seed,split){
   train_alm<-as.data.frame(mydt[dt,])
   test_alm<-as.data.frame(mydt[-dt,])
   
-  hlr = HierarchLinReg_Forward(train_alm)
+  hlr = HLR_Forward(train_alm)
   if (all(is.na(hlr))){
     results = NA
   }else{
